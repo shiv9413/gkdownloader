@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Button.dart';
 import 'InputField.dart';
+import 'ForgotButton.dart';
 
 class InputWrapper extends StatelessWidget {
   @override
@@ -24,7 +25,8 @@ class InputWrapper extends StatelessWidget {
             style: TextStyle(color: Colors.grey),
           ),
           SizedBox(height: 40,),
-          Button()
+          Button(),
+          ForgotButton()
         ],
       ),
     );

@@ -9,7 +9,7 @@ class Button extends StatelessWidget{
       margin: EdgeInsets.symmetric(horizontal: 50),
       decoration: BoxDecoration(
         color: Colors.cyan[500],
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(50),
       ),
       child: Center(
         child: Text("Login",style: TextStyle(
