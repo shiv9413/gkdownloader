@@ -4,8 +4,8 @@ class ForgotButton extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Container(
-      height: 50,
-      margin: EdgeInsets.symmetric(vertical: 10,horizontal: 50),
+      height: 30,
+      margin: EdgeInsets.symmetric(vertical: 10,horizontal: 120),
       decoration: BoxDecoration(
         color: Colors.red[400],
         borderRadius: BorderRadius.circular(50),
