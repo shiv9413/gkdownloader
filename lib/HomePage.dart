@@ -20,9 +20,9 @@ class _MyHomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     List<Widget> pages = [
-      screen1(context),
-      screen2(context),
-      screen3(context),
+      nav1(context),
+      nav2(context),
+      nav3(context),
     ];
 
     return Scaffold(
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<HomePage> {
     );
   }
 
-  Widget screen1(BuildContext context) {
+  Widget nav1(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<HomePage> {
     );
   }
 
-  Widget screen2(BuildContext context) {
+  Widget nav2(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<HomePage> {
     );
   }
 
-  Widget screen3(BuildContext context) {
+  Widget nav3(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -139,9 +139,19 @@ class TopicScreen extends StatelessWidget {
   // Function to return content based on the topic
   Widget getContent() {
     switch (topic) {
-      case 'Arrays':
-        return screen1(); // Replace this with the actual content of screen1.dart
+      case 'Strings':
+        return Container(
+          padding: EdgeInsets.all(16.0),
+          child: Text(
+            "Dealing with exceptions \n\n"
+                "1. Checked exceptions need to be specified or handled with a try-catch block \n\n"
+                "2. Unchecked exceptions can be addressed by fixing bugs in the code or by setting a try- catch block \n\n"
+                "3. Errors may have serveral causes,each with their own solutions",
+            style: TextStyle(fontSize: 18.0),
+          ),
+        ); // Replace this with the actual content of screen1.dart
     // Add cases for other topics as needed
+      case 'Arrays'
       default:
         return Container(); // Empty container for unknown topics
     }
