@@ -151,7 +151,27 @@ class TopicScreen extends StatelessWidget {
           ),
         ); // Replace this with the actual content of screen1.dart
     // Add cases for other topics as needed
-      case 'Arrays'
+      case 'Arrays':
+        return Container(
+          padding: EdgeInsets.all(16.0),
+          child: Text(
+            "When Building a Java Application of any complexity one must account for the fact that it exection\n\n"
+                "will not always go smoothy,sconer or later,some error will be encountered and \n\n"
+                "java way of handling this is to quote unquote,throw an exception \n\n"
+                "Catching and handling such exceptions is something which is required to ensure that a java program \n\n"
+                "continuous to run even when errors are encountered and that is the precisely the focus of this learning path.\n\n",
+            style: TextStyle(fontSize: 18.0),
+          ),
+        );
+      case 'Loops':
+        return Container(
+            padding: EdgeInsets.all(16.0),
+          child: Text(
+            "an Example of a try-catch block \n\n"
+                "double [] prices = { 5.90, 18.99, 22.2, 88.1 }; \n",
+            style: TextStyle(fontSize: 18.0),
+          ),
+        );
       default:
         return Container(); // Empty container for unknown topics
     }
