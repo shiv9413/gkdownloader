@@ -139,39 +139,15 @@ class TopicScreen extends StatelessWidget {
   // Function to return content based on the topic
   Widget getContent() {
     switch (topic) {
-      case 'Strings':
-        return Container(
-          padding: EdgeInsets.all(16.0),
-          child: Text(
-            "Dealing with exceptions \n\n"
-                "1. Checked exceptions need to be specified or handled with a try-catch block \n\n"
-                "2. Unchecked exceptions can be addressed by fixing bugs in the code or by setting a try- catch block \n\n"
-                "3. Errors may have serveral causes,each with their own solutions",
-            style: TextStyle(fontSize: 18.0),
-          ),
-        ); // Replace this with the actual content of screen1.dart
-    // Add cases for other topics as needed
       case 'Arrays':
-        return Container(
-          padding: EdgeInsets.all(16.0),
-          child: Text(
-            "When Building a Java Application of any complexity one must account for the fact that it exection\n\n"
-                "will not always go smoothy,sconer or later,some error will be encountered and \n\n"
-                "java way of handling this is to quote unquote,throw an exception \n\n"
-                "Catching and handling such exceptions is something which is required to ensure that a java program \n\n"
-                "continuous to run even when errors are encountered and that is the precisely the focus of this learning path.\n\n",
-            style: TextStyle(fontSize: 18.0),
-          ),
-        );
+        return screen1();// Replace this with the actual content of screen1.dart
+    // Add cases for other topics as needed
+      case 'Strings':
+        return screen2();
       case 'Loops':
-        return Container(
-            padding: EdgeInsets.all(16.0),
-          child: Text(
-            "an Example of a try-catch block \n\n"
-                "double [] prices = { 5.90, 18.99, 22.2, 88.1 }; \n",
-            style: TextStyle(fontSize: 18.0),
-          ),
-        );
+        return screen3();
+      case 'GUM':
+        return screen3();
       default:
         return Container(); // Empty container for unknown topics
     }
@@ -182,6 +158,22 @@ class TopicScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(topic),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context); // Navigate back to the previous screen
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
+                textStyle: TextStyle(fontSize: 18),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              ),
+              child: Text('Go Back'),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -190,17 +182,6 @@ class TopicScreen extends StatelessWidget {
             children: [
               getContent(), // Call the getContent function to display the content
               SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context); // Navigate back to the previous screen
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
-                  textStyle: TextStyle(fontSize: 18),
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                ),
-                child: Text('Go Back'),
-              ),
             ],
           ),
         ),
