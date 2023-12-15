@@ -72,7 +72,7 @@ class _MyHomePageState extends State<HomePage> {
                 textStyle: TextStyle(fontSize: 18),
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               ),
-              child: Text('Arrays'),
+              child: Text('Topic 1'),
             ),
             SizedBox(width: 8),
             ElevatedButton(
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<HomePage> {
                 textStyle: TextStyle(fontSize: 18),
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               ),
-              child: Text('Strings'),
+              child: Text('Topic 2'),
             ),
             SizedBox(width: 8),
             ElevatedButton(
@@ -102,9 +102,60 @@ class _MyHomePageState extends State<HomePage> {
                 textStyle: TextStyle(fontSize: 18),
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               ),
-              child: Text('Loops'),
+              child: Text('Topic 3'),
+            ),
+            SizedBox(width: 8),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.pink,
+                textStyle: TextStyle(fontSize: 18),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              ),
+              child: Text('Topic 4'),
             ),
           ],
+        ),
+        SizedBox(height: 8),  // Add spacing between rows
+        Row (
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(width: 8),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.greenAccent,
+                  textStyle: TextStyle(fontSize: 18),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                ),
+                child: Text('Topic 5'),
+              ),
+              SizedBox(width: 8),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.grey,
+                  textStyle: TextStyle(fontSize: 18),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                ),
+                child: Text('Topic 6'),
+              ),
+            ],
         ),
       ],
     );
