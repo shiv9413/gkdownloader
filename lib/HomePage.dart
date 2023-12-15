@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'Exceptions/screen1.dart';
 import 'Exceptions/screen2.dart';
 import 'Exceptions/screen3.dart';
+import 'Exceptions/screen4.dart';
+import 'Exceptions/screen5.dart';
+import 'Exceptions/screen6.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -64,7 +67,7 @@ class _MyHomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TopicScreen('Arrays')),
+                  MaterialPageRoute(builder: (context) => TopicScreen('Topic1')),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -79,7 +82,7 @@ class _MyHomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TopicScreen('Strings')),
+                  MaterialPageRoute(builder: (context) => TopicScreen('Topic2')),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -94,7 +97,7 @@ class _MyHomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                  MaterialPageRoute(builder: (context) => TopicScreen('Topic3')),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -109,7 +112,7 @@ class _MyHomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                  MaterialPageRoute(builder: (context) => TopicScreen('Topic4')),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -130,7 +133,7 @@ class _MyHomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                    MaterialPageRoute(builder: (context) => TopicScreen('Topic5')),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -145,7 +148,7 @@ class _MyHomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TopicScreen('Loops')),
+                    MaterialPageRoute(builder: (context) => TopicScreen('Topic6')),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -190,15 +193,18 @@ class TopicScreen extends StatelessWidget {
   // Function to return content based on the topic
   Widget getContent() {
     switch (topic) {
-      case 'Arrays':
+      case 'Topic1':
         return screen1();// Replace this with the actual content of screen1.dart
-    // Add cases for other topics as needed
-      case 'Strings':
+      case 'Topic2':
         return screen2();
-      case 'Loops':
+      case 'Topic3':
         return screen3();
-      case 'GUM':
-        return screen3();
+      case 'Topic4':
+        return screen4();
+      case 'Topic5':
+        return screen5();
+      case 'Topic6':
+        return screen6();
       default:
         return Container(); // Empty container for unknown topics
     }
