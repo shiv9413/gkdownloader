@@ -58,7 +58,7 @@ class _MyHomePageState extends State<HomePage> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Descriptions Screen'),
+        Text('Descriptions Screen '),
         SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
