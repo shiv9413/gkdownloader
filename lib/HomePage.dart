@@ -56,7 +56,8 @@ class _MyHomePageState extends State<HomePage> {
 
   Widget nav1(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text('Descriptions Screen '),
         SizedBox(height: 16),
