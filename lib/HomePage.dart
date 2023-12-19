@@ -219,17 +219,17 @@ class TopicScreen extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context); // Navigate back to the previous screen
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
-                textStyle: TextStyle(fontSize: 18),
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              ),
-              child: Text('Go Back'),
-            ),
+            // child: ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.pop(context); // Navigate back to the previous screen
+            //   },
+            //   style: ElevatedButton.styleFrom(
+            //     primary: Colors.blue,
+            //     textStyle: TextStyle(fontSize: 18),
+            //     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            //   ),
+            //   child: Text('Go Back'),
+            // ),
           ),
         ],
       ),
